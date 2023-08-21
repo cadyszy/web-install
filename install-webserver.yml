@@ -1,4 +1,5 @@
 - name: Apache server instalado
+  hosts: all
   become: yes
   tasks:
   - name: Ultima versao do apache server instalado
