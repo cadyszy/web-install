@@ -6,8 +6,13 @@
     yum:
       name: httpd
       state: latest
+  - name: Read-write git checkout from github
+    ansible.builtin.git:
+      repo: https://github.com/cadyszy/web-install/blob/main/default.html
+      dest: /var/www/html/index.html
   - name: Apache started e enable
     service:
       name: httpd
       enabled: true
       state: started
+      
