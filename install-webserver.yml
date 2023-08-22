@@ -12,7 +12,7 @@
       state: latest
   - name: Copiar index
     copy:
-      src: https://raw.githubusercontent.com/cadyszy/web-install/main/default.html
+      src: /var/lib/awx/projects/_10__git/default.html
       dest: /var/www/html/index.html
   - name: Apache started e enable
     service:
