@@ -10,9 +10,9 @@
     yum:
       name: httpd
       state: latest
-  - name: Read-write git checkout from github
-    ansible.builtin.git:
-      repo: https://github.com/cadyszy/web-install/blob/main/default.html
+  - name: Copiar index
+    copy:
+      src: https://raw.githubusercontent.com/cadyszy/web-install/main/default.html
       dest: /var/www/html/index.html
   - name: Apache started e enable
     service:
