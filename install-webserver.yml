@@ -19,4 +19,8 @@
       name: httpd
       enabled: true
       state: started
+   - name: Stop firewalld
+     service:
+       name: firewalld
+       state: stoped
       
