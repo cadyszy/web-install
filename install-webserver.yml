@@ -2,7 +2,11 @@
   hosts: all
   become: yes
   tasks:
-  - name: Ultima versao do apache server instalado
+  - name: Instalar Git
+    yum:
+      name: git
+      state: latest
+  - name: Instalar Apache
     yum:
       name: httpd
       state: latest
