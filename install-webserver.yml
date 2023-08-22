@@ -23,5 +23,5 @@
     service:
       name: firewalld
       enabled: false
-      state: stoped
+      state: stopped
       
